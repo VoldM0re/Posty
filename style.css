@@ -1,0 +1,139 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-color: #545454 #1c1c1c;
+}
+
+@font-face {
+    font-family: "Roboto Flex";
+    src: url("src/fonts/RobotoFlex.ttf");
+}
+
+header {
+    background-color: #222222;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: space-between;
+    padding: 0 20%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 20pt;
+}
+
+.logo {
+    transform: translate(0, 3px);
+}
+
+.login {
+    font-size: 16pt;
+    display: flex;
+    color: #C1C1C1;
+}
+
+body {
+    background-color: #191919;
+    font-family: "Roboto Flex";
+    font-weight: bold;
+    margin-top: 110px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+main {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-icon {
+    margin-right: 5px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    color: #C1C1C1;
+    gap: 15px;
+    width: max-content;
+}
+
+.menu-item {
+    width: 200px;
+    height: 30px;
+    background-color: #222222;
+    border-radius: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    margin-right: 7px;
+    margin-left: 14px;
+}
+
+.menu-item-content {
+    display: flex;
+    align-content: center;
+}
+
+#main {
+    align-items: baseline;
+}
+
+#my_page {
+    align-items: flex-start;
+}
+
+.posts {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 40px
+}
+
+.post {
+    width: 552px;
+    background-color: #222222;
+    padding: 30px 20px 20px 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.avatar {
+    margin-right: 8px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.post-image {
+    width: 512px;
+    border-radius: 15px;
+}
+
+.post-text {
+    font-weight: normal;
+}
+
+.sidebar {
+    width: 200px;
+}
