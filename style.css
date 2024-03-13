@@ -4,6 +4,11 @@ html {
     padding: 0;
     box-sizing: border-box;
     scrollbar-color: #545454 #1c1c1c;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -22,6 +27,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1;
 }
 
 a {
@@ -69,6 +75,7 @@ main {
     color: #C1C1C1;
     gap: 15px;
     width: max-content;
+    margin-bottom: 20px;
 }
 
 .menu-item {
@@ -81,6 +88,10 @@ main {
     align-items: center;
 }
 
+.menu-item:hover {
+    background-color: #2b2b2b;
+}
+
 .menu-icon {
     margin-right: 7px;
     margin-left: 14px;
@@ -89,6 +100,27 @@ main {
 .menu-item-content {
     display: flex;
     align-content: center;
+}
+
+.to_top {
+    font: inherit;
+    width: 200px;
+    color: #C1C1C1;
+    transition: .1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 75px;
+    position: fixed;
+    bottom: 40px;
+    background-color: #222222;
+    border: none;
+}
+
+.to_top:hover {
+    background-color: #2b2b2b;
 }
 
 #main {
