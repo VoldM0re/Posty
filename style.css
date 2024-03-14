@@ -1,91 +1,117 @@
 *,
 html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     scrollbar-color: #545454 #1c1c1c;
     scroll-behavior: smooth;
-}
-
-html {
-    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 @font-face {
-    font-family: "Roboto Flex";
     src: url("src/fonts/RobotoFlex.ttf");
+    font-family: "Roboto Flex";
 }
 
 header {
-    background-color: #222222;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    color: #fff;
-    justify-content: space-between;
-    padding: 0 20%;
-    position: fixed;
-    width: 100%;
-    top: 0;
     z-index: 1;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 0 20%;
+    color: #fff;
+    background-color: #222222;
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 h1 {
     font-size: 20pt;
+    color: #fff;
 }
 
 .logo {
     transform: translate(0, 3px);
 }
 
-.login {
+.login-button {
+    position: relative;
+    padding: 10px 1px;
     font-size: 16pt;
-    display: flex;
     color: #C1C1C1;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.login-button::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #C1C1C1;
+    transition: 0.2s ease;
+}
+
+.login-button:hover::before {
+    width: 100%;
 }
 
 body {
-    background-color: #191919;
-    font-family: "Roboto Flex";
-    font-weight: bold;
-    margin-top: 110px;
     display: flex;
     justify-content: center;
+    margin-top: 110px;
     padding-bottom: 40px;
+    font-family: "Roboto Flex";
+    font-weight: bold;
+    background-color: #191919;
+    height: 100%;
 }
 
 main {
-    width: 60%;
     display: flex;
     justify-content: space-between;
+    width: 60%;
 }
 
-.user-icon {
+.login-button-icon {
     margin-right: 5px;
 }
 
 .menu {
     display: flex;
     flex-direction: column;
-    color: #C1C1C1;
     gap: 15px;
     width: max-content;
     margin-bottom: 20px;
+    color: #C1C1C1;
 }
 
 .menu-item {
-    width: 200px;
-    height: 30px;
-    background-color: #222222;
-    border-radius: 20px;
-    font-weight: 600;
     display: flex;
     align-items: center;
+    width: 200px;
+    height: 40px;
+    font-weight: 600;
+    background-color: #222222;
+    border: 1px #545454;
+    border: solid 1px #545454;
+    border-radius: 20px;
+    transition: .2s ease;
 }
 
 .menu-item:hover {
@@ -102,26 +128,6 @@ main {
     align-content: center;
 }
 
-.to_top {
-    font: inherit;
-    width: 200px;
-    color: #C1C1C1;
-    transition: .1s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    cursor: pointer;
-    height: 75px;
-    position: fixed;
-    bottom: 40px;
-    background-color: #222222;
-    border: none;
-}
-
-.to_top:hover {
-    background-color: #2b2b2b;
-}
 
 #main {
     align-items: baseline;
@@ -132,20 +138,21 @@ main {
 }
 
 .posts {
-    color: #fff;
     display: flex;
     flex-direction: column;
-    gap: 40px
+    gap: 40px;
+    color: #fff;
 }
 
 .post {
-    width: 552px;
-    background-color: #222222;
-    padding: 30px 20px 20px 20px;
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 552px;
+    padding: 30px 20px 20px 20px;
+    background-color: #222222;
+    border: solid 1px #545454;
+    border-radius: 20px;
 }
 
 .avatar {
@@ -168,4 +175,144 @@ main {
 
 .sidebar {
     width: 200px;
+}
+
+.to_top {
+    position: fixed;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 75px;
+    font: inherit;
+    color: #C1C1C1;
+    background-color: #222222;
+    border: solid 1px #545454;
+    border-radius: 20px;
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+.to_top:hover {
+    background-color: #2b2b2b;
+}
+
+.login-window {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 550px;
+    padding: 40px 150px;
+    background-color: #222222;
+    border: solid 1px #545454;
+    border-radius: 20px;
+}
+
+.login-window-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#login-window-icon {
+    width: 56px;
+}
+
+.input-blocks {
+    position: relative;
+    top: -15px;
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: 100%;
+    color: #fff;
+}
+
+.input-text {
+    position: relative;
+    top: 0.9rem;
+    left: 0.6rem;
+    padding: 5px;
+    font-size: 12pt;
+    color: #C1C1C1;
+    background-color: #222222;
+}
+
+.input-field {
+    outline: none;
+    display: flex;
+    width: 100%;
+    padding: 15px 10px;
+    padding-left: 17%;
+    font-size: 12pt;
+    color: #C1C1C1;
+    background-color: #222222;
+    border: solid 1px rgb(71, 71, 71);
+    border-radius: 15px;
+    transition: .2s ease-in-out;
+}
+
+#input-login {
+    background: url(src/icons/login-field.svg) no-repeat 8% 50%;
+}
+
+#input-password {
+    background: url(src/icons/password-field.svg) no-repeat 5% 50%;
+}
+
+.enter {
+    width: 100%;
+    height: 50px;
+    font-size: 15pt;
+    font-weight: 700;
+    color: #fff;
+    background-color: #2A2A2A;
+    border: solid 1px rgb(71, 71, 71);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.enter:hover {
+    background-color: #2b2b2b;
+}
+
+.exception {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #C1C1C1;
+}
+
+.exception-link {
+    transition: .2s ease-in-out;
+}
+
+.exception-link:hover {
+    color: #9bff8c;
+}
+
+.exception-link::after {
+    content: "";
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 0%;
+    height: 2px;
+    background-color: #9bff8c;
+    transition: 0.2s ease-in-out;
+}
+
+.exception-link:hover::after {
+    width: 100%;
 }

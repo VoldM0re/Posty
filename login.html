@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="src/my_page_icon.svg" />
+    <title>Posty</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html"><img class='logo' src="src/icons/logo.svg" alt="Логотип Posty"></a>
+        <h1 class='title'>Войти в аккаунт</h1>
+    </header>
+
+    <form action="" class='login-window'>
+
+        <div class="login-window-title">
+            <img src="src/icons/login.svg" alt="Иконка входа" id='login-window-icon'>
+            <h1>Войдите в аккаунт</h1>
+        </div>
+
+        <div class="input-blocks">
+            <div class="input-block">
+                <label for="login" class='input-text'>Логин</label>
+                <input type="text" name="login" placeholder='Введите логин' class='input-field' id='input-login'>
+            </div>
+
+            <div class="input-block">
+                <label for="password" class='input-text'>Пароль</label>
+                <input type="password" name="password" placeholder='Введите пароль' class='input-field'
+                    id='input-password'>
+            </div>
+        </div>
+
+        <input type="button" value="Войти" class='enter'>
+
+        <div class="exception">
+            <span>Нет аккаунта?</span>
+            <a href="registration.html" class='exception-link'>Зарегистрироваться</a>
+        </div>
+    </form>
+
+</body>
+
+</html>
