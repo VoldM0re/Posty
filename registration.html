@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="src/my_page_icon.svg" />
-    <title>Posty - Вход в аккаунт</title>
+    <title>Posty - Регистрация</title>
 </head>
 
 <body>
 
     <header>
         <a href="index.html"><img class='logo' src="src/icons/logo.svg" alt="Логотип Posty"></a>
-        <h1 class='title'>Вход в аккаунт</h1>
+        <h1 class='title'>Регистрация</h1>
     </header>
 
     <form action="" class='login-window'>
 
         <div class="login-window-title">
-            <img src="src/icons/login.svg" alt="Иконка входа" id='login-window-icon'>
-            <h1>Войдите в аккаунт</h1>
+            <img src="src/icons/registration.svg" alt="Иконка регистрации" class='window-icon'>
+            <h1>Создайте аккаунт</h1>
         </div>
 
         <div class="input-blocks">
@@ -34,13 +34,20 @@
                 <input type="password" name="password" placeholder='Введите пароль' class='input-field'
                     id='input-password' required>
             </div>
+
+            <div class="input-block">
+                <label for="password_confirm" class='input-text'>Повторите пароль</label>
+                <input type="password" name="password_confirm" placeholder='Введите пароль снова' class='input-field'
+                    id='input-password' required>
+            </div>
+
         </div>
 
-        <input type="button" value="Войти" class='enter'>
+        <input type="button" value="Создать аккаунт" class='enter'>
 
         <div class="exception">
-            <span>Нет аккаунта?</span>
-            <a href="registration.html" class='exception-link'>Зарегистрироваться</a>
+            <span>Уже есть аккаунт?</span>
+            <a href="login.html" class='exception-link'>Войти в аккаунт</a>
         </div>
     </form>
 

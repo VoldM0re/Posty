@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="src/my_page_icon.svg" />
-    <title>Posty</title>
+    <title>Posty - Главная</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
 
     <main>
 
-        <nav>
+        <nav class='left_sidebar sidebar'>
             <ul class="menu">
                 <a href='#' class='menu-item'>
                     <div class="menu-item-content" id='main'>
@@ -30,14 +30,23 @@
                         <span>Главная</span>
                     </div>
                 </a>
+
                 <a href='#' class='menu-item'>
                     <div class="menu-item-content" id='my_page'>
                         <img class='menu-icon' src="src/icons/my_page_icon.svg" alt="Иконка страницы пользователя">
-                        <span>Моя страница</span>
+                        <span>Мой профиль</span>
+                    </div>
+                </a>
+
+                <a href='#' class='menu-item'>
+                    <div class="menu-item-content" id='my_page'>
+                        <img class='menu-icon' src="src/icons/create.svg" alt="Иконка страницы пользователя">
+                        <span>Создать пост</span>
                     </div>
                 </a>
             </ul>
         </nav>
+
         <div class="posts">
 
             <div class="post">
@@ -108,7 +117,7 @@
 
         </div>
 
-        <div class="sidebar">
+        <div class="right_sidebar sidebar">
             <a href='#' class="to_top">Наверх</a>
         </div>
 
